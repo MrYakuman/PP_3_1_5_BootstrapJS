@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My first app!</title>
+</head>
+<body>
+<form method="post" action="/logout">
+    <button class="logout">LogOut</button>
+</form>
+<h1> List of users </h1>
+<div class="userList">
+    <th:block th:each="usr : ${users}">
+        <a th:href="@{/admin/{id}(id=${usr.getId()})}"><h3 th:text="${usr}"></h3></a>
+    </th:block>
+</div>
+<div>
+    <form method="get" action="/admin/new">
+        <button class="new">Add new user</button>
+    </form>
+</div>
+</body>
+
+</html>
