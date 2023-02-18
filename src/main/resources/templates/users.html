@@ -11,7 +11,7 @@
           crossorigin="anonymous"></script>
 </head>
 <body>
-<!--Верх страницы с возможностью выхода-->
+
 <nav  class="navbar navbar-light bg-dark " >
   <div  class="container-fluid">
     <a class="navbar-brand ">
@@ -24,7 +24,7 @@
     </form>
   </div>
 </nav>
-<!--колонка слева-и две кнопки-========================================================-->
+
 
 
 <div class="row g-0">
@@ -35,15 +35,13 @@
       <a href="/user" class="list-group-item ">User</a>
     </div>
   </div>
-  <!--======================================================================================-->
-
 
   <div class="col-md-10 bg-light vh-100">
     <br>
     <div class="container-fluid">
       <h1>Admin panel</h1>
     </div>
-    <!--таблица внутри правой колонки==============================================================================-->
+
 
     <div class="container-fluid ">
       <ul class="nav nav-tabs">
@@ -103,34 +101,6 @@
                       <div class="modal-body">
 
                         <div >
-
-<!--                          <form th:action="@{/admin/edit/{id}(id=${user.id})}" th:method="PATCH" th:object="${user}">-->
-
-<!--                            <p>-->
-<!--                              <label th:for="username">Name</label>-->
-<!--                              <input type="text" name="username" th:id="username" th:value="${user.getName()}">-->
-<!--                            </p>-->
-<!--                            <p>-->
-<!--                              <label th:for="lastName">LastName</label>-->
-<!--                              <input type="text" name="lastName" th:id="lastName" th:value="${user.getLastName()}"><br/>-->
-<!--                            </p>-->
-<!--                            <p>-->
-<!--                              <label th:for="email">Email</label>-->
-<!--                              <input type="text" name="email" th:id="email" th:value="${user.getEmail()}"><br/>-->
-<!--                            </p>-->
-<!--                            <p>-->
-<!--                              <label th:for="password">Password</label>-->
-<!--                              <input type="text" name="password" th:id="password" th:value="${user.getPassword()}"><br/>-->
-<!--                            </p>-->
-
-<!--                            <p>-->
-<!--                              <label th:for="roles">Roles</label>-->
-<!--                              <input type="checkbox" name="roles"-->
-<!--                                     th:each="role : ${roles}"-->
-<!--                                     th:text="${role.getUserRole()}"-->
-<!--                                     th:value="${role.getId()}"><br/>-->
-<!--                            </p>-->
-
                             <button type="submit">Change data</button>
                           </form>
                           </br>
@@ -153,10 +123,6 @@
 
                 </div>
 
-
-<!--                <form th:action="@{admin/edit/{id}(id=${user.getId()})}" th:object="${user}">-->
-<!--                  <button class="btn btn-info btn-sm" type="submit">Edit</button>-->
-<!--                </form>-->
               </td>
               <td>
                 <form th:action="@{admin/delete/{id}(id=${user.id})}" th:object="${user}" th:method="DELETE">
